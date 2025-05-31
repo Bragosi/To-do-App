@@ -2,3 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* index.css */
+.my-button {
+  background-color:#6A0DAD ; /* Custom dark gray */
+  color: white;             /* Text color */
+  padding: 0.5rem 1rem;     /* Padding */
+  border-radius: 0.5rem;    /* Rounded corners */
+  font-size: 1rem;          /* Font size */
+  cursor: pointer;          /* Pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.my-button:hover {
+  background-color: #7a10dd; /* Slightly lighter on hover */
+}
+
+.secondaryBtn {
+     background-color:#6A0DAD ; /* Custom dark gray */
+  color: white;             /* Text color */
+  padding: 0.5rem 1rem;     /* Padding */
+  font-size: 1rem;          /* Font size */
+  cursor: pointer;          /* Pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
