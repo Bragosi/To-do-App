@@ -1,6 +1,7 @@
 import bragosiLogo2 from '../assets/bragosiLogo2.png'
 import { useState } from 'react'
-
+import { MdDelete } from "react-icons/md";
+import { FaCheck } from "react-icons/fa";
 const TodoApp = () => {
     const [isCompleteScreen, setIsCompleteScreen ] = useState(false);
   return (
@@ -35,22 +36,24 @@ const TodoApp = () => {
                  
                  <div className='p-7 ' >
                      <div className='relative flex-row flex items-start'>
-                <button 
-                className={`secondaryBtn ${isCompleteScreen &&
-                     ''}`} onClick={()=>setIsCompleteScreen(false)}
-                >
-                    Todo</button>
-                <button 
-                className={`secondaryBtn ${isCompleteScreen
-                     && 'bg-slate-700'}`} onClick={()=>setIsCompleteScreen(true)}
-                >Completed</button>
+
+
+                <button className={`${isCompleteScreen=== false ? 'secondaryBtn' : 'btn'}`} onClick={()=>setIsCompleteScreen(false)} > Todo</button>
+                <button className={`${isCompleteScreen===true ? 'secondaryBtn' : 'btn'}`} onClick={()=>setIsCompleteScreen(true)} >Completed</button>
+
+
+
             </div>
-            <div 
-            className='todo-list'>
-                <div>
-                    <h1 className='relative text-white  font-semibold text-xl'>
-                        Task 1</h1>
-                    <p>Description</p>
+            <div className='flex flex-col mt-5 w-full'>
+                <div className='bg-gray-900 flex flex-row p-8 w-full'>
+                <div className='flex flex-col w-full'>
+                        <h1 className='text-[25px] font-bold text-purple mt-0'>Task 1</h1>
+                         <p className='text-[14px] text-white mt-0'>Description</p>
+                </div>
+                <div className='flex flex-row mt-5 gap-3'>
+                    <MdDelete className='icon' title='Delete' />
+                    <FaCheck className='iconn' title='Completed' />
+                </div>
                 </div>
             </div>
                  </div>

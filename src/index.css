@@ -25,3 +25,28 @@
   cursor: pointer;          /* Pointer on hover */
   transition: background-color 0.3s ease; /* Smooth hover effect */
 }
+.btn{
+  background-color:#2b282e ; /* Custom dark gray */
+  color: white;             /* Text color */
+  padding: 0.5rem 1rem;     /* Padding */
+  font-size: 1rem;          /* Font size */
+  cursor: pointer;          /* Pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.icon{
+  font-size: 35px;
+  cursor: pointer;
+  color:white;
+}
+.iconn{
+  font-size: 35px;
+  cursor: pointer;
+  color:purple;
+}
+.icon:hover{
+  color: #9943eb;
+}
+.iconn:hover{
+  color: #7a10dd;
+}
