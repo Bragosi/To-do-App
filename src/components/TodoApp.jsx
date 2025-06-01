@@ -8,6 +8,7 @@ const TodoApp = () => {
     const [newTitle, setNewTitle] = useState("");
     const [newDescription, setNewDescription] = useState("");
     const [allTodos, setAllTodos] = useState([]);
+    const [completedTodo, setCompletedTodo] = useState([])
 
     const handleAddTodo = () => {
         let newTodoItem = {
@@ -28,6 +29,26 @@ const TodoApp = () => {
         setAllTodos(reducedTodo);
         localStorage.setItem('todoList', JSON.stringify(reducedTodo));
     };
+    const handleComplete = (index)=>{
+        let now = new Date()
+        let dd = now.getDate()
+        let mm = now.getMonth() +1
+        let yyyy = now.getFullYear()
+        let h = now.getHours()
+        let m = now.getMinutes()
+        let s = now.getSeconds()
+        let completedOn = dd + '-' + mm + '-' + yyyy + ' at ' + h + ':' + m + ':' + s
+        
+        let filterdItem ={
+            ...allTodos[index],
+            completedOn:completedOn
+        }
+        let updatedCompletedArr = [...completedTodo]
+        updatedCompletedArr.push(filterdItem)
+        setCompletedTodo(updatedCompletedArr)
+        handleDeleteTodo(index)
+    }
+
 
     useEffect(() => {
         let savedTodo = JSON.parse(localStorage.getItem('todoList'));
@@ -96,7 +117,7 @@ const TodoApp = () => {
                                 </button>
                             </div>
                             <div className="flex flex-col mt-5 w-full">
-                                {allTodos.map((items, i) => (
+                                {isCompleteScreen===false ?  allTodos.map((items, i) => (
                                     <div key={i} className="bg-gray-900 mb-2 flex flex-row p-8 w-full">
                                         <div className="flex flex-col w-full">
                                             <h1 className="text-[25px] font-bold text-purple mt-0">
@@ -110,10 +131,32 @@ const TodoApp = () => {
                                                 title="Delete"
                                                 onClick={() => handleDeleteTodo(i)}
                                             />
-                                            <FaCheck className="iconn" title="Completed" />
+                                            <FaCheck className="iconn" title="Completed"
+                                            onClick={()=>handleComplete(i)}
+                                            />
                                         </div>
                                     </div>
-                                ))}
+                                )) : ''}
+                            </div>
+                              <div className="flex flex-col mt-5 w-full">
+                                {isCompleteScreen===true ?  completedTodo.map((items, i) => (
+                                    <div key={i} className="bg-gray-900 mb-2 flex flex-row p-8 w-full">
+                                        <div className="flex flex-col w-full">
+                                            <h1 className="text-[25px] font-bold text-purple mt-0">
+                                                {items.title}
+                                            </h1>
+                                            <p className="text-[14px] text-white mt-0">{items.description}</p>
+                                            <p className='text-gray-600'>Completed on: <i>{items.completedOn}</i></p>
+                                        </div>
+                                        <div className="flex flex-row mt-5 gap-3">
+                                            <MdDelete
+                                                className="icon"
+                                                title="Delete"
+                                                onClick={() => handleDeleteTodo(i)}
+                                            />
+                                        </div>
+                                    </div>
+                                )) : ''}
                             </div>
                         </div>
                     </div>
