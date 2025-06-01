@@ -11,6 +11,11 @@ const TodoApp = () => {
     const [completedTodo, setCompletedTodo] = useState([])
 
     const handleAddTodo = () => {
+        if (!newTitle.trim() || !newDescription.trim()) {
+        alert("Please fill in both the title and description before adding a task.");
+        return; // Prevents adding an empty task
+    }
+
         let newTodoItem = {
             title: newTitle,
             description: newDescription,
@@ -29,6 +34,12 @@ const TodoApp = () => {
         setAllTodos(reducedTodo);
         localStorage.setItem('todoList', JSON.stringify(reducedTodo));
     };
+     const handleDeleteCompleteTodo = (index)=>{
+        let reducedTodo = [...completedTodo];
+        reducedTodo.splice(index, 1);
+        setCompletedTodo(reducedTodo);
+        localStorage.setItem('completedTodo', JSON.stringify(reducedTodo));
+    }
     const handleComplete = (index)=>{
         let now = new Date()
         let dd = now.getDate()
@@ -47,13 +58,18 @@ const TodoApp = () => {
         updatedCompletedArr.push(filterdItem)
         setCompletedTodo(updatedCompletedArr)
         handleDeleteTodo(index)
+        localStorage.setItem('completedTodo', JSON.stringify(updatedCompletedArr));
     }
 
 
     useEffect(() => {
         let savedTodo = JSON.parse(localStorage.getItem('todoList'));
+        let savedCompletedTodo = JSON.parse(localStorage.getItem('completedTodo'));
         if (savedTodo) {
             setAllTodos(savedTodo);
+        }
+        if (savedCompletedTodo){
+            setCompletedTodo(savedCompletedTodo)
         }
     }, []);
 
@@ -152,7 +168,7 @@ const TodoApp = () => {
                                             <MdDelete
                                                 className="icon"
                                                 title="Delete"
-                                                onClick={() => handleDeleteTodo(i)}
+                                                onClick={() =>handleDeleteCompleteTodo(i)}
                                             />
                                         </div>
                                     </div>
