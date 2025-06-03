@@ -4,6 +4,15 @@ This To-Do App is a simple and interactive application designed to help users ma
 
 ---
 
+## Live Demo
+[View live Demo here]( to-do-app-six-cyan.vercel.app)
+ ---
+
+## Todo Screenshot
+[Todo App screenshot](![todo-Screenshot](https://github.com/user-attachments/assets/835afcff-d43f-43fb-bef6-296c6bbde2bb) )
+
+---
+
 ## Features
 
 - **Add Tasks**: Create new tasks with a title and description.
@@ -21,50 +30,6 @@ This To-Do App is a simple and interactive application designed to help users ma
 - **React Icons**: Icon library for enhanced visual elements.
 - **CSS**: Custom styling for a modern and responsive UI.
 - **Local Storage**: Browser-based storage for persisting tasks.
-
----
-
-## Getting Started
-
-### Prerequisites
-
-Ensure you have the following installed on your system:
-
-- **Node.js** (LTS version recommended)
-- **npm** or **yarn** (Node Package Manager)
-
-### Installation
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/todo-app.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd todo-app
-   ```
-
-3. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-### Running the Application
-
-Start the development server:
-
-```bash
-npm start
-# or
-yarn start
-```
-
-Visit `http://localhost:3000` in your browser to view the application.
-
----
 
 ## Usage
 
@@ -89,17 +54,6 @@ Visit `http://localhost:3000` in your browser to view the application.
 
 ---
 
-## Folder Structure
-
-```plaintext
-src
-├── components
-│   ├── TodoApp.jsx  # Main component for the app
-├── assets
-│   ├── bragosiLogo2.png  # Logo image used in the app
-├── App.css  # Styling for the app
-├── index.js  # Entry point for React
-```
 
 ---
 
@@ -117,6 +71,6 @@ src
 
 ## Author
 
-[Boluwatife](https://github.com/your-github-profile)
+[Boluwatife](https://github.com/Bragosi/Bragosi)
 
 Feel free to fork this repository, submit issues, or contribute to its development!
