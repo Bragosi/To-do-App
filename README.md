@@ -6,10 +6,8 @@ This To-Do App is a simple and interactive application designed to help users ma
 
 ## Live Demo
 [View live Demo here](https://to-do-app-six-cyan.vercel.app/)
- ---
-
-## Todo Screenshot
 [Todo App screenshot](![todo-Screenshot](https://github.com/user-attachments/assets/835afcff-d43f-43fb-bef6-296c6bbde2bb) )
+
 
 ---
 
