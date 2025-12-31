@@ -4,10 +4,10 @@ This To-Do App is a simple and interactive application designed to help users ma
 
 ---
 
-# Live Demo
+## Live Demo
 [View live Demo here](https://to-do-app-six-cyan.vercel.app/)
 ---
-# To-do App Screenshot
+## To-do App Screenshot
 ![Screenshot_3-6-2025_212456_to-do-app-six-cyan vercel app](https://github.com/user-attachments/assets/1c97eb03-e629-48b5-807f-99e2b03fa570)
 
 
@@ -53,25 +53,4 @@ This To-Do App is a simple and interactive application designed to help users ma
 5. **Clear Completed Tasks**:
    - Remove completed tasks by clicking the delete icon (🗑) in the "Completed" section.
 
----
 
-
----
-
-## Future Enhancements
-
-- **Drag and Drop**: Reorder tasks within the list.
-- **Categorization**: Organize tasks by category or priority.
-- **Authentication**: Enable user accounts for cloud-based task storage.
-- **Search Functionality**: Quickly find tasks by keywords.
-- **Progress Tracking**: Add visual indicators for task completion progress.
-
----
-
-
-
-## Author
-
-[Boluwatife](https://github.com/Bragosi/Bragosi)
-
-Feel free to fork this repository, submit issues, or contribute to its development!
