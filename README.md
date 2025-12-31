@@ -1,13 +1,13 @@
-# To-Do App
+## To-Do App
 
 This To-Do App is a simple and interactive application designed to help users manage their tasks efficiently. It features a clean user interface and provides functionalities for creating, editing, completing, and deleting tasks.
 
 ---
 
-## Live Demo
+# Live Demo
 [View live Demo here](https://to-do-app-six-cyan.vercel.app/)
 ---
-## To-do App Screenshot
+# To-do App Screenshot
 ![Screenshot_3-6-2025_212456_to-do-app-six-cyan vercel app](https://github.com/user-attachments/assets/1c97eb03-e629-48b5-807f-99e2b03fa570)
 
 
